@@ -4,7 +4,7 @@ import pandas as pd
 #Simulação de coleta de dados
 def coletar_dados():
     return [
-        {"data": datetime.date.today(), "evento": "Processamento Finalizado","Status": "OK"}
+        {"data": datetime.date.today(), "evento": "processamento finalizado","status": "OK"},
     ]
 
 #Salvar em um CSV
@@ -18,4 +18,5 @@ def salvar_em_csv(dados):
         print("Iniciando ROBO...")
         dados = coletar_dados()
         salvar_em_csv(dados)
+
 
