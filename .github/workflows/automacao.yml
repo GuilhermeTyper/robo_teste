@@ -13,7 +13,7 @@ jobs:
 
       - name: Commit do relatório
         run: |
-          git config user.name "github-actions"
+          git config user.name "origin/main"
           git add dados/relatorio.csv
           git commit -m "Atualização diaria"
           git push
