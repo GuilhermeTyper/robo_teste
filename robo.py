@@ -1,21 +1,20 @@
 import datetime
 import pandas as pd
 
-# Simula coleta de dados
+#Simulação de coleta de dados
 def coletar_dados():
     return [
-        {"data": datetime.date.today(), "evento": "Processamento finalizado", "status": "OK"},
+        {"data" : datetime.date.today(), "evento": "Processamento Finalizado","Status": "OK"},
     ]
 
-# Salva os dados em um CSV
-def salvar_relatorio(dados):
+#Salvar em um CSV
+def salvar_em_csv(dados):
     df = pd.DataFrame(dados)
     df.to_csv('dados/relatorio.csv', index=False)
-    print("✅ Relatório salvo com sucesso!")
+    print(f"Relatório salvo com Sucesso!")
 
-# Execução principal
+    #Execução Principal
 if __name__ == "__main__":
-    print("🤖 Iniciando robô...")
+    print('Iniciando ROBO...')
     dados = coletar_dados()
-    salvar_relatorio(dados)
-
+    salvar_em_csv(dados)
