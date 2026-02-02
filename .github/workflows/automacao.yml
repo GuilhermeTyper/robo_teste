@@ -13,6 +13,8 @@ jobs:
 
       - name: Commit do relatorio
         run: |
+          git config --global user "github-action"
+          git config --global user.email "270210.gui@gmail.com"
           git add dados/relatorio.csv
           git commit -m "Atualização diaria"
           git push
