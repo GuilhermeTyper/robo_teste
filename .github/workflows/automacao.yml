@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  executar_robo:
+  executar:
     runs-on: ubuntu-latest
     steps:
       - name: clonar repositório
@@ -13,7 +13,7 @@ jobs:
 
       - name: Commit do relatório
         run: |
-          git config user.name "origin/main"
+          git config user.name "github-action"
           git add dados/relatorio.csv
           git commit -m "Atualização diaria"
           git push
