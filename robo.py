@@ -11,10 +11,9 @@ def coletar_dados():
 def salvar_em_csv(dados):
     df = pd.DataFrame(dados)
     df.to_csv('dados/relatorio.csv', index=False)
-    print(f"Relatório salvo com Sucesso!")
+    print("Relatório salvo com Sucesso!)
 
     #Execução Principal
-
     if __name__ == "__main__":
         print('Iniciando ROBO...')
         dados = coletar_dados()
